@@ -81,6 +81,8 @@ Then:
 
 > Tip: If the icon doesn’t update, exit/re-enter Homebrew Launcher or reboot the 3DS.
 
+<img src="assets/screenshots/3ds-homebrew.jpg" width="520" />
+
 ---
 
 ## IMPORTANT — Set your PC IP in the 3DS app ⚠️
