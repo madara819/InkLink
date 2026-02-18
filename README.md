@@ -215,3 +215,24 @@ Credits
 Created by **Elena Vasienti** (GitHub: **Redkush01**).
 
 If you redistribute or fork this project, you must keep the original copyright notice and the **MIT License**.
+
+## FAQ
+
+**Q: The dot moves but the mouse/keys don't work (macOS).**  
+A: Enable **Accessibility** for InkLink: System Settings → Privacy & Security → Accessibility.
+
+**Q: Nothing arrives on Desktop.**  
+A: Make sure PC and 3DS are on the same Wi-Fi, and allow UDP **port 4545** in your firewall.
+
+**Q: Is this affiliated with Nintendo or osu!?**  
+A: No. This is an independent community project. Use at your own risk.
+
+## Community
+
+For setup questions and general help, use **Discussions** (recommended).  
+Use **Issues** for bugs and concrete feature requests.
+
+## Project
+
+- Changelog: see **CHANGELOG.md**
+- Release notes template: see **.github/RELEASE_TEMPLATE.md**
