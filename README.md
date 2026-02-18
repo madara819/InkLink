@@ -1,7 +1,16 @@
 # InkLink
 
-[![Download](https://img.shields.io/badge/Download-Latest%20Release-2ea44f)](https://github.com/Redkush01/InkLink/releases/latest)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<p>
+  <a href="https://github.com/Redkush01/InkLink/releases/latest">
+    <img src="https://img.shields.io/badge/Download-Latest%20Release-2ea44f?style=for-the-badge" alt="Download Latest Release">
+  </a>
+</p>
+
+<p>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License">
+  </a>
+</p>
 
 ## Download
 
@@ -206,4 +215,3 @@ Credits
 Created by **Elena Vasienti** (GitHub: **Redkush01**).
 
 If you redistribute or fork this project, you must keep the original copyright notice and the **MIT License**.
-
