@@ -16,7 +16,7 @@ InkLink has two parts:
 
 ### Modes & Controls
 
-#### OSU Mode
+#### OSU! Mode
 - **Touch** = aim cursor
 - Hold **L** while touching = **click/hold** (streams / sliders)
 - Release **L** = release click
