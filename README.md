@@ -52,7 +52,9 @@ You must copy the InkLink 3DS app to your SD card so it appears in Homebrew Laun
 
 ### SD card structure
 
-Create this folder: /3ds/inklink-3ds/
+Create this folder: 
+
+- `/3ds/inklink-3ds/`
 
 Put these files inside:
 
@@ -60,8 +62,8 @@ Put these files inside:
 - `inklink-3ds.smdh` (icon + metadata)
 
 Final result:
-/3ds/inklink-3ds/inklink-3ds.3dsx
-/3ds/inklink-3ds/inklink-3ds.smdh
+- `/3ds/inklink-3ds/inklink-3ds.3dsx`
+- `/3ds/inklink-3ds/inklink-3ds.smdh`
 
 Then:
 1) Insert the SD into your 3DS
@@ -74,7 +76,7 @@ Then:
 
 ## IMPORTANT — Set your PC IP in the 3DS app ⚠️
 
-InkLink works only if your 3DS sends packets to your computer’s **local IP address** (example: `192.168.1.78`).
+InkLink works only if your 3DS sends packets to your computer’s **local IP address** (example: `192.16x.1.xx`).
 
 ### Find your IP
 
@@ -83,52 +85,76 @@ InkLink works only if your 3DS sends packets to your computer’s **local IP add
 - Or terminal/cmd: `ifconfig` (macOS) / `ipconfig` (Windows)
 
 ### Set it in `main.c`
+On your PC, open the 3DS homebrew project and edit:
 
-In the 3DS project:
+**source/main.c**
+and find the lines:
 
 ```c
-#define TARGET_IP "192.168.1.78"
+#define TARGET_IP "192.xxx.x.xx"
 #define TARGET_PORT 4545
+```
+**Replace the IP with your current PC IP, then rebuild and copy the updated .3dsx + .smdh to the SD card.**
+*Leave the port as 4545 unless you changed it in the desktop app too.*
 
-Replace the IP with your current PC IP, then rebuild and copy the updated .3dsx + .smdh to the SD card.
+**Rebuild the 3DS homebrew**
+
+In the 3DS project folder, run:
+```c
+gmake clean
+gmake
+```
+This will generate updated files, typically:
+
+- `inklink-3ds.3dsx`
+- `inklink-3ds.smdh`
+
+
+**LAST STEP: Copy the updated files to your SD card**
+
+Place them here:
+
+- `/3ds/inklink-3ds/`.
 
 ⚠️ Having issues? Follow the IP setup guide:
 https://github.com/Redkush01/InkLink/blob/main/docs/ip-setup.md
 
-Desktop App (macOS / Windows)
-	1.	Open InkLink
-	2.	Press Start
-	3.	Launch InkLink on the 3DS
-	4.	Touch the 3DS screen:
-	•	If the preview dot moves, the connection is OK
+**Desktop App (macOS / Windows)**
+1. Open InkLink
+2. Press Start
+3. Launch InkLink on the 3DS
+4. Touch the 3DS screen:
+**If the preview dot moves, the connection is OK**
 
-macOS permissions (required for mouse/keyboard control)
+*macOS permissions* (required for mouse/keyboard control)
 
 System Settings → Privacy & Security → Accessibility
 Enable InkLink (or “Electron” while developing).
 If it still doesn’t move: toggle off/on and restart InkLink.
 
-Windows firewall
+*Windows firewall*
 
 When prompted, allow InkLink through Windows Firewall (Private network).
 If no prompt appears: Windows Security → Firewall → “Allow an app”.
 
 ⸻
 
-Troubleshooting
+**Troubleshooting**
 
-Dot doesn’t move
-	•	wrong TARGET_IP
-	•	different Wi-Fi networks
-	•	firewall blocking UDP 4545
+*Dot doesn’t move:*
+- wrong TARGET_IP
+- different Wi-Fi networks
+- firewall blocking UDP 4545
 
-Dot moves but cursor doesn’t
-	•	macOS Accessibility not enabled
-	•	OS security blocking input control
+*Dot moves but cursor doesn’t:*
+- macOS Accessibility not enabled
+- OS security blocking input control
 
-Feels shaky / jittery (osu!)
-	•	increase OSU Stability slider
-	•	improve Wi-Fi signal
+*Feels shaky / jittery (osu!)*
+- increase OSU Stability slider
+- improve Wi-Fi signal
+
+*If it worked yesterday, your IP probably changed. DHCP is a drama queen lol*
 
 ⸻
 
