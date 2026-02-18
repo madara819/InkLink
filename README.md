@@ -22,7 +22,7 @@ Get the latest version from **Releases**:
 
 1. Download InkLink Desktop from **Releases** and run it.
 2. On first run, allow required permissions:
-   - macOS: **System Settings → Privacy & Security → Accessibility**
+- macOS: **System Settings → Privacy & Security → Accessibility**
    - Windows: allow InkLink through Firewall if prompted
 3. Click **Start** in the Desktop app (UDP listener).
 4. Put the 3DS app on your SD at `/3ds/inklink-3ds/` and launch it from **Homebrew Launcher**.
@@ -49,7 +49,6 @@ Turn your **modded Nintendo 3DS** into a lightweight touch input device for **os
 ## What InkLink does
 
 InkLink has two parts:
-
 - **3DS homebrew app**: reads touchscreen + buttons and sends data over UDP
 - **Desktop app (macOS/Windows)**: receives data and controls mouse/keyboard
 
@@ -91,12 +90,10 @@ You must copy the InkLink 3DS app to your SD card so it appears in Homebrew Laun
 
 ### SD card structure
 
-Create this folder: 
-
+Create this folder:
 - `/3ds/inklink-3ds/`
 
 Put these files inside:
-
 - `inklink-3ds.3dsx`
 - `inklink-3ds.smdh` (icon + metadata)
 
@@ -146,14 +143,12 @@ gmake clean
 gmake
 ```
 This will generate updated files, typically:
-
 - `inklink-3ds.3dsx`
 - `inklink-3ds.smdh`
 
 **LAST STEP: Copy the updated files to your SD card**
 
 Place them here:
-
 - `/3ds/inklink-3ds/`.
 
 **Desktop App (macOS / Windows)**
