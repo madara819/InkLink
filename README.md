@@ -2,6 +2,15 @@
 
 Turn your **modded Nintendo 3DS** into a lightweight touch input device for **osu!** and creative apps (Illustrator/Figma) over Wi-Fi (UDP).
 
+## Demo
+
+<img src="assets/screenshots/demo.gif" width="520" />
+
+## Screenshots
+
+<img src="assets/screenshots/desktop.png" width="520" />
+
+
 > ✅ **Required:** a **modded 3DS** with **Homebrew Launcher** (able to run `.3dsx` homebrew).  
 > ❌ If your 3DS is not modded / has no Homebrew Launcher, InkLink will not work.
 
