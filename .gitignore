@@ -15,3 +15,11 @@ build/
 3ds/**/*.elf
 3ds/**/*.o
 3ds/**/*.d
+# 3DS build outputs
+3ds/**/**/*.3dsx
+3ds/**/**/*.smdh
+3ds/**/**/*.elf
+3ds/**/**/*.o
+3ds/**/**/*.d
+3ds/**/build/
+3ds/**/out/
