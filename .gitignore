@@ -3,3 +3,6 @@ dist/
 app-prod/
 .DS_Store
 *.log
+release-3ds/
+InkLink-3DS-Homebrew-SD.zip
+build/
