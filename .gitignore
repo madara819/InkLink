@@ -6,3 +6,6 @@ app-prod/
 release-3ds/
 InkLink-3DS-Homebrew-SD.zip
 build/
+!build/icon.ico
+!build/icon.icns
+!build/icon.png
