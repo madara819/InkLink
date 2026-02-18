@@ -1,0 +1,2 @@
+17ea7ddf9e0875850c0c86dabbd5fac72590c889f9554574ea982edadaf18186  dist/InkLink-1.0.0-arm64-mac.zip
+e98014dd58ee4f530518b729aacd48b2d14e298ab71eba27b336c2e453f52d9f  InkLink-3DS-Homebrew-SD.zip
