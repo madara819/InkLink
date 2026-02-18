@@ -127,7 +127,8 @@ Place them here:
 *macOS permissions* (required for mouse/keyboard control)
 
 System Settings → Privacy & Security → Accessibility
-Enable InkLink (or “Electron” while developing).
+
+**IMPORTANT**:Enable InkLink (or “Electron” while developing).
 If it still doesn’t move: toggle off/on and restart InkLink.
 
 *Windows firewall*
