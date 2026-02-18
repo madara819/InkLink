@@ -116,8 +116,6 @@ Place them here:
 
 - `/3ds/inklink-3ds/`.
 
-⚠️ Having issues? Follow the IP setup guide:
-https://github.com/Redkush01/InkLink/blob/main/docs/ip-setup.md
 
 **Desktop App (macOS / Windows)**
 1. Open InkLink
