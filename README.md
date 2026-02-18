@@ -1,5 +1,27 @@
 # InkLink
 
+[![Download](https://img.shields.io/badge/Download-Latest%20Release-2ea44f)](https://github.com/Redkush01/InkLink/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+## Download
+
+Get the latest version from **Releases**:
+- **Desktop App** (macOS / Windows)
+- **Nintendo 3DS app** (SD-ready zip)
+
+## Quick Start
+
+1. Download InkLink Desktop from **Releases** and run it.
+2. On first run, allow required permissions:
+   - macOS: **System Settings → Privacy & Security → Accessibility**
+   - Windows: allow InkLink through Firewall if prompted
+3. Click **Start** in the Desktop app (UDP listener).
+4. Put the 3DS app on your SD at `/3ds/inklink-3ds/` and launch it from **Homebrew Launcher**.
+5. Touch the 3DS screen → the preview dot should move on Desktop.
+6. Press **SELECT** on the 3DS to switch modes (osu!/Illustrator).
+
+> Tip: Make sure your PC and 3DS are on the same Wi-Fi network.
+
 Turn your **modded Nintendo 3DS** into a lightweight touch input device for **osu!** and creative apps (Illustrator/Figma) over Wi-Fi (UDP).
 
 ## Demo
@@ -9,7 +31,6 @@ Turn your **modded Nintendo 3DS** into a lightweight touch input device for **os
 ## Screenshots
 
 <img src="assets/screenshots/desktop.png" width="520" />
-
 
 > ✅ **Required:** a **modded 3DS** with **Homebrew Launcher** (able to run `.3dsx` homebrew).  
 > ❌ If your 3DS is not modded / has no Homebrew Launcher, InkLink will not work.
@@ -120,13 +141,11 @@ This will generate updated files, typically:
 - `inklink-3ds.3dsx`
 - `inklink-3ds.smdh`
 
-
 **LAST STEP: Copy the updated files to your SD card**
 
 Place them here:
 
 - `/3ds/inklink-3ds/`.
-
 
 **Desktop App (macOS / Windows)**
 1. Open InkLink
@@ -170,8 +189,21 @@ If no prompt appears: Windows Security → Firewall → “Allow an app”.
 
 Credits
 
-Made by Redkush01
+## Troubleshooting
+
+- **No movement / no input**
+  - Ensure PC and 3DS are on the same Wi-Fi network.
+  - Check firewall allows UDP on port **4545**.
+- **macOS: mouse/keys don’t work**
+  - Enable **Accessibility** permission for InkLink.
+- **Windows: input blocked**
+  - Try running InkLink as Administrator and allow it through Windows Firewall.
+- **Lag/jitter**
+  - Improve Wi-Fi signal, reduce interference, and tweak smoothing/stability settings (if available).
 
 ## Credits
-Created by **Elena Vasienti**.  
-License: **MIT** (keep the copyright notice + this credit when redistributing).
+
+Created by **Elena Vasienti** (GitHub: **Redkush01**).
+
+If you redistribute or fork this project, you must keep the original copyright notice and the **MIT License**.
+
