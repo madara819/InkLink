@@ -7,9 +7,7 @@ const outDir = "app-prod";
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
 
-// IMPORTANT:
-// - "electron" MUST stay external, otherwise esbuild bundles the npm "electron" package (bad).
-// - nut-js should stay external too (it has native deps/binaries).
+
 const EXTERNAL = ["electron", "@nut-tree-fork/nut-js"];
 
 await build({
