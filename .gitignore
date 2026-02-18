@@ -9,3 +9,9 @@ build/
 !build/icon.ico
 !build/icon.icns
 !build/icon.png
+# 3DS build output
+3ds/**/build/
+3ds/**/out/
+3ds/**/*.elf
+3ds/**/*.o
+3ds/**/*.d
