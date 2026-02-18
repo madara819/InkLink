@@ -1,0 +1,51 @@
+{
+  "name": "inklink-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "prod:build": "node buildscripts/build-prod.mjs",
+    "dist": "npm run prod:build && electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^40.4.1",
+    "electron-builder": "^26.7.0",
+    "esbuild": "^0.27.3",
+    "javascript-obfuscator": "^5.3.0"
+  },
+  "dependencies": {
+    "@nut-tree-fork/nut-js": "^4.2.6"
+  },
+  "build": {
+    "appId": "com.redkush01.inklink",
+    "productName": "InkLink",
+    "asar": true,
+    "compression": "maximum",
+    "removePackageScripts": true,
+    "electronLanguages": ["en-US"],
+    "files": [
+      "app-prod/**/*",
+      "package.json",
+      "node_modules/@nut-tree-fork/**/*",
+      "node_modules/koffi/**/*"
+    ],
+    "extraMetadata": {
+      "main": "app-prod/main.js"
+    },
+    "mac": {
+      "target": [
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>InkLink</title>
+  <style>
+    body{font-family:system-ui;background:#0f1115;color:#e9eef7;margin:18px}
+    h2{margin:6px 0 14px}
+    .card{background:#171a21;border:1px solid #23283a;border-radius:12px;padding:14px;margin-bottom:12px}
+    button{padding:10px 12px;border-radius:10px;border:1px solid #2c3350;background:#23283a;color:#e9eef7;cursor:pointer}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .pill{padding:6px 10px;border-radius:999px;background:#23283a;border:1px solid #2c3350}
+    input[type="range"]{width:100%}
+    #dotWrap{height:220px;border-radius:12px;background:#0b0d12;border:1px dashed #2c3350;position:relative;overflow:hidden}
+    #dot{width:10px;height:10px;border-radius:999px;position:absolute;left:0;top:0;transform:translate(-50%,-50%);background:#7cf3ff;box-shadow:0 0 16px #7cf3ff}
+    small{opacity:.85}
+    .hint{opacity:.9;line-height:1.45;margin:10px 0 0}
+    details{border:1px solid #23283a;border-radius:12px;background:#141722;padding:10px}
+    summary{cursor:pointer;list-style:none;font-weight:700}
+    summary::-webkit-details-marker{display:none}
+    .tag{display:inline-block;padding:2px 8px;border:1px solid #2c3350;border-radius:999px;background:#23283a;margin-right:6px;font-size:12px;opacity:.95}
+    code{background:#0b0d12;border:1px solid #23283a;border-radius:8px;padding:2px 6px}
+    ul{margin:10px 0 0 18px}
+    .important{border:1px solid #3a2c50;background:#1a1526}
+    .footer{position:fixed;right:14px;bottom:10px;opacity:.6;font-size:12px}
+  </style>
+</head>
+<body>
+  <h2>InkLink</h2>
+
+  <div class="card">
+    <div class="row">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" disabled>Stop</button>
+      <span class="pill" id="modePill">illustrator</span>
+    </div>
+    <p id="status"><small>Ready.</small></p>
+    <p class="hint"><span class="tag">Tip</span> Press <b>SELECT</b> on your 3DS to toggle modes.</p>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <button id="osuBtn">OSU Mode</button>
+      <button id="illuBtn">Illustrator Mode</button>
+      <button id="readmeBtn">GitHub README</button>
+    </div>
+
+    <p class="hint">
+      <span class="tag">OSU</span><br/>
+      Touch = aim • Hold <b>L</b> while touching = click/hold • Release <b>L</b> = release click
+    </p>
+
+    <p class="hint">
+      <span class="tag">Illustrator</span><br/>
+      <b>A</b>=V (Select) • <b>X</b>=P (Pen) • <b>Y</b>=B (Brush) • Hold <b>L</b>=click/drag • Hold <b>R</b>=spring eraser • <b>B</b>=Undo
+    </p>
+  </div>
+
+  <div class="card">
+    <p><b>OSU Stability</b> <small>(move right = smoother & steadier)</small></p>
+    <input id="stability" type="range" min="0" max="1" step="0.01" value="0.6" />
+  </div>
+
+  <div class="card">
+    <p><b>Connection Preview</b></p>
+    <div id="dotWrap"><div id="dot"></div></div>
+    <p class="hint"><small>If the dot moves while touching the 3DS, packets are reaching your computer.</small></p>
+  </div>
+
+  <details class="card important" open>
+    <summary>IMPORTANT: Set your PC IP in the 3DS app</summary>
+    <p class="hint">
+      The 3DS app must send to your PC local IP (example <code>192.168.1.78</code>). Edit <code>TARGET_IP</code> in <code>source/main.c</code>, rebuild, then copy the new <code>.3dsx</code> + <code>.smdh</code> to the SD card.
+    </p>
+    <p class="hint">
+      Everything is explained in the README (use the <b>GitHub README</b> button above).
+    </p>
+  </details>
+
+  <div class="footer">Redkush01</div>
+
+  <script src="./renderer.js"></script>
+</body>
+</html>
