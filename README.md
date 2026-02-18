@@ -160,3 +160,7 @@ If no prompt appears: Windows Security → Firewall → “Allow an app”.
 Credits
 
 Made by Redkush01
+
+## Credits
+Created by **Elena Vasienti**.  
+License: **MIT** (keep the copyright notice + this credit when redistributing).
