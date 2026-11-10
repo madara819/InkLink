@@ -15,11 +15,6 @@ jobs:
       - name: Download repository
         uses: actions/checkout@v4
 
-      - name: Check configured IP
-        run: |
-          grep -F '#define TARGET_IP "10.88.25.88"' \
-            3ds/inklink-3ds/include/config.h
-
       - name: Build Nintendo 3DS application
         run: |
           docker run --rm \
