@@ -1,0 +1,38 @@
+
+name: Build InkLink 3DS
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-3ds:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Check configured IP
+        run: |
+          grep -F '#define TARGET_IP "10.88.25.88"' \
+            3ds/inklink-3ds/include/config.h
+
+      - name: Build Nintendo 3DS application
+        run: |
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE:/work" \
+            -w /work/3ds/inklink-3ds \
+            devkitpro/devkitarm:latest \
+            bash -lc "make clean && make"
+
+      - name: Upload 3DS files
+        uses: actions/upload-artifact@v4
+        with:
+          name: InkLink-3DS
+          path: |
+            3ds/inklink-3ds/inklink-3ds.3dsx
+            3ds/inklink-3ds/inklink-3ds.smdh
+          if-no-files-found: error
